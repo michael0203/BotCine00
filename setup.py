@@ -1,13 +1,14 @@
 import tweepy
 import time
+import datetime
+import os
+from os import environ
 
-input_user  = '@oifrancine'  #Coloque aqui o @ do twitter da pessoa
-#  michael2biff
-API_KEY = '3pjPmu6UAXvKJ6VYgw73gvmNC' #API KEY
-API_SECRET = 'HYeMkP3CArVMQS2jNjiAuDnn8DrVlLrHAZUvvrCUphF0D81WxQ' #API secret key
-#Bearer token AAAAAAAAAAAAAAAAAAAAAP2EJgEAAAAAz9MefKMjfjsBjIdzwbsRb6COTUQ%3DlAfdgfUW82S8v0qt8txiOMYcXrSh54imIluzWS1pgbotL5WMiW
-API_TOKEN = '1326343100961353729-VNu5AGqslvSKdGQzWVRDk9s3SwvHZi' #acess token
-API_TOKEN_SECRET = 'cDe5BBVGHonSQ4bRj5yULHqPm1iEEgzshRWpmrTX4TXr5' #acess token secret
+input_user       = environ['input_user']  #Coloque aqui o @ do twitter da pessoa
+API_KEY          = environ['API_KEY']  #API KEY
+API_SECRET       = environ['API_SECRET']#API secret key
+API_TOKEN        = environ['API_TOKEN'] #acess token
+API_TOKEN_SECRET = environ['API_TOKEN_SECRET']#acess token secret
 
 
 auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
